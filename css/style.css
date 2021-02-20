@@ -1,0 +1,482 @@
+ *{
+  list-style-type: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+
+
+body{
+  min-height: 100vh;
+}
+
+header .wrapper{
+  background: rgb(202, 198, 198);
+  margin-top: -15px;
+}
+
+section{
+  display: flex;
+
+}
+
+section .wrapper{
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  
+}
+
+section .left-wrap{
+  width: 25%;
+}
+
+
+.left-wrap .contact-list{
+  padding-left: 0px !important;
+  display: block;
+  /* flex-direction: column-reverse; */
+  overflow-x: scroll;
+  height: 550px;
+}
+
+
+.contact-list::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.contact-list::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+
+
+
+.contact-list li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-top: 15px;
+  width: 300px;
+  padding: 2px 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.contact-list li:hover{
+  background: lightgray;
+  transition: 0.5s;
+}
+
+.contact-list li p{
+  font-size: 15px!important;
+  font-weight: bold;
+  color: rgb(85, 84, 84);
+  margin-right: auto;
+  padding-left: 30px;
+}
+
+.contact-list img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+section .wrapper{
+  display: flex;
+  width: 1250px;
+}
+
+.link-list{
+  display: none;
+  padding: 10px 15px;
+  margin-left: auto;
+}
+
+
+.link-list a{
+  padding: 10px 15px;
+  color: darkgray;
+}
+
+.link-list a:hover{
+  color: rgb(230, 217, 217);
+  transition: 0.5s;
+}
+
+section .right-wrap{
+  position: relative;
+  width: 70%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  background-image: url('../telegram-photo.jpg');
+}
+
+.personal {
+  padding: 15px !important;
+}
+
+.right-wrap .name{
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-left: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+
+}
+
+
+
+.message-form{
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-height: 60px !important;
+  bottom: -30px; 
+  background: white !important;
+  border-left: 1px solid lightgray;
+  padding-top: 0px;
+  display: none;
+}
+
+.message-form .element-invisible {
+  position: absolute !important;
+  height: 1px; width: 1px; 
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.message-form .message-textarea{
+  height: 40px;
+  width: 650px;
+  outline: none;
+  border: none;
+  resize: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 10px 13px;
+  margin-top: 5px;
+  margin-bottom: 0px !important;
+  overflow: hidden;
+  background: rgb(226, 224, 224);
+  border-radius: 5px;
+}
+
+.message-textarea:placeholder-shown {
+  border-color: teal;
+  color: purple;
+  font-style: italic;
+}
+.message-form #i{
+  padding-left: 20px;
+}
+.message-form i{
+  cursor: pointer;
+  font-size: 25px;
+  color: darkgray;
+  padding-right: 5px;
+  margin-top: -20px;
+}
+
+.message-form i:hover{
+  color: rgb(214, 208, 208);
+  transition: 0.5;
+}
+
+#send-message{
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: rgb(127, 127, 224);
+  margin-top: -10px;
+}
+#send-message:hover{
+  color: rgb(95, 162, 218);
+  
+}
+
+.messages-list{
+  overflow-x: scroll;
+  height: 450px;
+}
+.message-list{
+  position: relative;
+}
+
+.messages-list .center-info{
+  position: absolute;
+  top: 300px;
+  left: 250px;
+  font-size: 26px;
+  color: rgb(86, 86, 94);
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+.messages-list .send{
+  margin-left: auto;
+  margin-right: 80px;
+  margin-top: 30px;
+  background: white;
+  max-width: 200px;
+  padding: 10px;
+  overflow-wrap: break-word;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom-left-radius: none;
+  position: relative;
+  font-size: 16px;
+}
+
+.send button{
+  width: 12px;
+  height: 10px;
+  position: absolute;
+  left: 150px;
+  font-size: 6px;
+}
+
+.send p{
+  margin-bottom: 2px !important;
+}
+
+.messages-list::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.messages-list::-webkit-scrollbar-thumb {
+  background: #7a7575;
+  border: 0px none #b3b3b3;
+  border-radius: 50px;
+}
+
+.send::after{
+  content: "";
+  display: block;
+  position: absolute;
+  border: 8px solid white;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  left: -14px;
+  bottom: 0px;
+}
+
+.set-list{
+  background: white;
+  margin-top: 4px;
+}
+
+.set-item{
+  display: flex;
+  margin-top: 5px;
+  margin-left: -20px!important;
+  width: 280px;
+}
+
+.set-item:hover{
+  transition: .5s;
+  background: lightgray;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.set-item p{
+  margin-left: 30px !important;
+  margin-bottom: 0 !important; 
+  font-size: 17px;
+}
+
+.set-item i{
+  padding: 10px 15px;
+  width: 50px;
+}
+
+.set-item p:hover{
+  color: #9b9898;
+}
+
+.modal-dialog {
+  width: 300px;
+  height: 600px;
+  padding: 0;
+  margin-left: 6px;
+}
+
+.modal-foote{
+  width: 250px;
+  margin-top: 120px !important;
+  margin-left: 40px !important;
+}
+
+
+.image-user{
+  padding: 5px;
+  background-image: url('../telegram-photo.jpg');
+  position: relative;
+}
+.image-user h4{
+  font-weight: bold;
+  color: #4d4b4b;
+}
+.image-user p{
+  font-weight: normal;
+  color: #4d4b4b;
+  font-size: 15px;
+}
+
+.image-user img{
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.collapsed{
+  border: none;
+  outline: none;
+}
+.collapse {
+  /* position: absolute; */
+  width: 250px;
+  margin-top: -45px;
+  margin-left: 45px;
+  border: none;
+  /* transition: 2s; */
+}
+
+.collapse .collapsed{
+  width: 250px !important;
+}
+
+.collapse img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.card{
+  display: flex;
+}
+
+
+.info-user{
+  padding-left: 500px;
+}
+
+.info-user h6{
+  font-size: 18px !important;
+  color: rgb(27, 26, 26);
+}
+
+.header{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgb(76, 76, 185);
+  padding: 20px;
+  width: 300px;
+  margin-left: -17px;
+}
+
+.header .username{
+  color: white;
+  padding-left: 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header .photouser{
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+}
+
+.modal-body > p{
+  margin-left: -11px !important;
+  font-size: 15px;
+}
+.modal-body > p > i{
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+.modal-body .nickname{
+  font-size: 20px !important;
+}
+.nickname span{
+  margin-left: 25px;
+  color: rgb(245, 122, 122);
+  font-weight: bold;
+  width: 150px !important;
+}
+
+.bio{
+  font-size: 20px !important
+}
+
+.bio span{
+  margin-left: 30px;
+  font-weight: bold;
+  width: 150px !important;
+  color: #4d4b4b;
+}
+
+.notification:hover{
+  color: #707070;
+  cursor: pointer;
+}
+
+.adding-to-contact:hover{
+  color: rgb(100, 69, 240);
+  cursor: pointer;
+}
+
+.share{
+  padding-left: 50px !important;
+  padding-top: 20px;
+}
+.share:hover{
+  cursor: pointer;
+  color: rgb(100, 69, 240);
+}
+
+.block{
+  padding-left: 50px !important;
+}
+.block:hover{
+  cursor: pointer;
+  color: rgb(100, 69, 240);
+}
+
+.clear{
+  padding-left: 50px !important;
+}
+
+.delete{
+  padding-left: 50px !important;
+}
+.delete:hover{
+  cursor: pointer;
+  color: rgb(100, 69, 240);
+
+}
+
+.modal-body p{
+  margin-top: 20px !important;
+}
